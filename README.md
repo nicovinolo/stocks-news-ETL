@@ -36,7 +36,7 @@ The repository is organized as follows:
     - Extracts data from the Finnhub API for:
         - Daily news articles related to one or more companies (provided by the user as a list of stock tickers).
         - Company information associated with those stock tickers.
-    - Output: Two Parquet files are created (`news_raw_dataYYYY_MM_DD.parquet` and `company_raw_dataYYYY_MM_DD.parquet`)
+    - Output: Two Parquet files are created.
 
     The main Python scripts in this layer are:
     - `API_company_extraction.py`: Extracts company details from the API.
@@ -49,23 +49,16 @@ The repository is organized as follows:
     
     The following scripts handle this process:
     
-    - **`db_creation.py`**: This script creates the necessary tables in Redshift:
-        - **news_raw_data**: Contains raw data for each news article.
-        - **company_dimension**: Contains information about the companies mentioned in the articles.
-        - **source_dimension**: Contains metadata about the news sources.
-        - **news_fact_table**: Contains detailed information on each news article, including FKs from company_dimension and source_dimension.
-        - **company_insights**: Contains company-level news insights for analysis.
+    - **`db_creation.py`**: This script creates the necessary tables in Redshift.
 
     - **`db_data_insertion.py`**: This script handles inserting the transformed data into the Redshift tables:
         - Loads news articles into the **news_raw_data**.
         - Loads company information into the **company_dimension**.
         
-    - **`db_transformation.py`**: This script performs data cleaning, normalization, and linking (foreign key relationships) between the fact and dimension tables. The transformed data is then ready for analysis.
+    - **`db_transformation.py`**: This script performs data normalization and linking (foreign key relationships) between the fact and dimension tables. The transformed data is then ready for analysis.
         - Loads source information into the **source_dimension** table.
         - Loads news curated data into the **news_fact_table** table.
-
-
-    
+  
 3. **Gold Layer**: Generating Insights
     - In this layer, the pipeline calculates key metrics and insights for each company based on the news articles. The results are stored in the **company_insights** table, which includes metrics that allow users to analyze news coverage trends over time.
 
