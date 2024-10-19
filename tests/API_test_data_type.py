@@ -45,3 +45,4 @@ class TestCompanyProfileTableDataTypes(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+#lets try and test if liting is working
