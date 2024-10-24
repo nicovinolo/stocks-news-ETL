@@ -18,9 +18,6 @@ def silver_task_02_f(**context):
 
         table_tansformation(connection, execution_date_str)
 
-    except AirflowException as e:
-        raise e
-
 
 if __name__ == "__main__":
     silver_task_02_f()
