@@ -1,4 +1,3 @@
-from airflow.exceptions import AirflowException
 from datetime import timedelta
 
 from utils.engine_creation import create_redshift_engine_from_env
