@@ -23,9 +23,6 @@ def silver_task_01_f(**context):
         insert_company_data_into_redshift(connection, execution_date_str)
         insert_news_data_into_redshift(connection, execution_date_str)
 
-    except AirflowException as e:
-        raise e
-
 
 if __name__ == "__main__":
     silver_task_01_f()
