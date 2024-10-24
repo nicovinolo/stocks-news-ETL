@@ -18,7 +18,12 @@ The repository is organized as follows:
 - `tasks/`: Individual tasks for the ETL process.
 - `tests/`: Test scripts for validating different functionalities.
 - `utils/`: Utility functions shared across different layers.
-
+- `Dockerfile`: Dockerfile used to get base image and install libraries.
+- `docker-compose.yaml`: docker-compose configured for this proyect.
+- `requirements.txt`: python libraries.
+-  `Makefile`: makefile to automate the process.
+-  `.github/workflows`: triggers github actions.
+  
 ### ETL Process
 
 1. **Diagram**   

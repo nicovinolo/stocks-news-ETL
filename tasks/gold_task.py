@@ -15,6 +15,5 @@ def gold_task_f(**context):
     
     populate_company_insights(connection, execution_date_str)
 
-
 if __name__ == "__main__":
     gold_task_f()
