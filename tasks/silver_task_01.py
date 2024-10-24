@@ -19,7 +19,7 @@ def silver_task_01_f(**context):
     execution_date_str = execution_date.strftime('%Y-%m-%d')
 
     insert_company_data_into_redshift(connection, execution_date_str)
-    
+
     insert_news_data_into_redshift(connection, execution_date_str)
 
 

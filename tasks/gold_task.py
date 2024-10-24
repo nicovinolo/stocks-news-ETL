@@ -12,7 +12,7 @@ def gold_task_f(**context):
     execution_date = context['execution_date'] - timedelta(days=1)
 
     execution_date_str = execution_date.strftime('%Y-%m-%d')
-    
+
     populate_company_insights(connection, execution_date_str)
 
 
