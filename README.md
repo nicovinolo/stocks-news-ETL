@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an ETL pipeline that extracts, transforms, and loads (ETL) stock-related news data from the Finnhub API into a data warehouse hosted on Amazon Redshift. The pipeline is divided into three layers: Bronze, Silver, and Gold. The process is automated using Docker, Apache Airflow, and Python, making it efficient and scalable.
+This project is an ETL pipeline that extracts, transforms, and loads (ETL) stock-related news data from the Finnhub API into a database hosted on Amazon Redshift. The pipeline is divided into three layers: Bronze, Silver, and Gold. The process is automated using Docker, Apache Airflow, and Python, making it efficient and scalable.
 
 ### Project Structure
 
@@ -29,7 +29,7 @@ The repository is organized as follows:
 1. **Diagram**   
     ![](images/ETL.png)
 
-1. **Data Warehouse**   
+1. **Database**   
     ![](images/DW.png)
 
 1. **Company Insights**   
